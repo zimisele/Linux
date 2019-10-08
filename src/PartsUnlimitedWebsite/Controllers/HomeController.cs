@@ -8,8 +8,7 @@ using PartsUnlimited.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-//test Ci and CD
-
+//CI and CD triggers
 namespace PartsUnlimited.Controllers
 {
     public class HomeController : Controller
