@@ -8,7 +8,7 @@ using PartsUnlimited.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-//change name to HOL-CI
+//CI and CD
 namespace PartsUnlimited.Controllers
 {
     public class HomeController : Controller
