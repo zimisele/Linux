@@ -8,7 +8,7 @@ using PartsUnlimited.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-//CI tregger
+//CI and CD
 namespace PartsUnlimited.Controllers
 {
     public class HomeController : Controller
