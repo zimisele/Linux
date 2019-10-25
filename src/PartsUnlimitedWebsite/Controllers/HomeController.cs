@@ -8,7 +8,7 @@ using PartsUnlimited.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-//CI and CD
+//CI and Continous Deployment
 namespace PartsUnlimited.Controllers
 {
     public class HomeController : Controller
