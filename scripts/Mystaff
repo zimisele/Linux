@@ -20,3 +20,7 @@ ufw reload
 - nmtui
 - exec bash
 
+tcpdump -s 0 -vv -X 'tcp dst port 443' -w azuretest.pcap ##when you checking dump
+curl https://iotnxt.azurecr.io -v ##when you testing URL 
+openssl s_client -connect 127.0.0.1:5671 ##when you testing the certificates
+nmap IP address of the server to check open ports
