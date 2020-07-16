@@ -1,0 +1,47 @@
+when we trying to extend partition
+https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/recognize-expanded-volume-linux.html#identify-linux-file-system
+    1  fdisk -l
+    2  cfdisk
+    3  clear
+    4  fdisk /dev/xvda
+    5  fdisk -l
+    6  df -h
+    7  mount
+    8  cat /etc/fstab
+    9  man fstab
+   10  lsblk
+   11  growpart /dev/nvme0n1 1
+   12  growpart /dev/xvda 1
+   13  fdisk -l
+   14  df -h
+   15  clear
+   16  resize2fs /dev/xvda1
+   17  xfs_growfs --help
+   18  xfs_growfs /
+   19  df -h
+   20  history
+   21  ls -l /
+   22  ls /mnt
+   23  fdisk -l
+   24  mount /dev/xvdf1 /mnt
+   25  file -s /dev/xvdf1
+   26  mount /dev/xvdf1 /mnt -t xfs
+   27  fsck /dev/xvdf1
+   28  xfs_repair /dev/xvdf1
+   29  mount /dev/xvdf1 /mnt -t xfs
+   30  man mount
+   31  mount -t xfs /dev/xvdf1 /mnt
+   32  mount -t xfs /dev/xvdf1 /mnt -o nouuid
+   33  ls /mnt
+   34  man mount.xfs
+   35  man mount
+   36  man xfs
+   37  dmesg
+   38  clear
+   39  history
+   
+   My own 
+   fdisk -l
+   lsblk
+   growpart /dev/xvda 1
+   xfs_growfs /
