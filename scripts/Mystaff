@@ -1,0 +1,22 @@
+my notes commands 
+my commands notes
+ssh-add ~/.ssh/aws-prod-k8s  #for adding the keys
+ssh-add -l  ##for looking for added keys
+sudo apt update && sudo apt dist-upgrade ## #for updating everything
+fdisk -l  # #for checking for disk
+firewall-cmd --zone=public --add-port=80/tcp  ##opening port
+firewall-cmd --permanent --zone=public --add-port=80/tcp  ##permanent
+curl localhost:200/metrics # for checking metrics
+scp 172.30.0.239:zim* /mnt/c/Users/Zimisele/OpenVPN/config/ ## for going to my computer directory
+less /var/log/rabbitmq/rabbit@oneRabbit.log ---looking for logs for checking logs
+
+##opening ports on Vms
+ufw status
+ufw enable
+ufw allow port no /tcp
+ufw reload
+
+## To change hostname on Vms
+- nmtui
+- exec bash
+
