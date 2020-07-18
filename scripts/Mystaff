@@ -9,6 +9,7 @@ firewall-cmd --permanent --zone=public --add-port=80/tcp  ##permanent
 curl localhost:200/metrics # for checking metrics
 scp 172.30.0.239:zim* /mnt/c/Users/Zimisele/OpenVPN/config/ ## for going to my computer directory
 less /var/log/rabbitmq/rabbit@oneRabbit.log ---looking for logs for checking logs
+:%s/the name you want to change/name you want it to change to  ## when you change the name on VI
 
 ##opening ports on Vms
 ufw status
