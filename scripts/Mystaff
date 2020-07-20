@@ -37,3 +37,5 @@ git add -A
 git commit -m 'Added my project'
 git remote add origin git@github.com:scotch-io/my-new-project.git
 git push -u -f origin master
+git config --global user.email "zimisele9@gmail.com"
+git config --global user.name "zimisele9@gmail.com"
