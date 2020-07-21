@@ -1,0 +1,27 @@
+
+## Prometheus monitoring
+https://computingforgeeks.com/how-to-install-grafana-on-ubuntu-debian/
+https://kifarunix.com/install-prometheus-on-ubuntu-18-04/
+https://github.com/prometheus/node_exporter/blob/master/docs/example-16-compatibility-rules.yml    || prometheus group
+https://github.com/free/sql_exporter monitoring of Database
+https://techexpert.tips/grafana/grafana-email-notification-setup/  ##for notification
+
+
+kafka monitoring 
+sudo docker run -ti --rm -p 9308:9308 danielqsj/kafka-exporter --kafka.server=kafka:9092 --sasl.enabled=true --tls.enabled=true --sasl.username=47QKIMI2G427ICZM --sasl.password=19OK2gadVArQd6smUwzZePDZeRFfIwXXabvZblXPE+Wa1784rL2z1CZQuEIv/Gy2
+sudo docker run -ti -d --rm -p 9308:9308 danielqsj/kafka-exporter --kafka.server=pkc-lq8v7.eu-central-1.aws.confluent.cloud:9092 --sasl.enabled --tls.enabled --sasl.username=47QKIMI2G427ICZM --sasl.password=19OK2gadVArQd6smUwzZePDZeRFfIwXXabvZblXPE+Wa1784rL2z1CZQuEIv/Gy2 --log.level=debug --log.enable-sarama --tls.insecure-skip-tls-verify
+9d57d501947ce5a8ffa4e8fb54584b8a2647ed6263fdb66ed1828342976b6362
+
+SQL monitoring
+sudo docker run -p 300:9399 -v /etc/docker/sql_exporter.yml:/sql_exporter.yml githubfree/sql_exporter
+
+## prometheus.yml 
+curl localhost:200/metrics
+prometheus config file
+- job_name: "mongodb"
+  scrape_interval: 5s
+  static_configs:
+  - targets: ['192.168.20.105:9090']
+  basic_auth:
+    username: vyu4etVYrrr89DPd91wyYT0eyRFJjNun
+    password: vyu4etVYrrr89DPd91wyYT0eyRFJjNun:QkSWGYpvcCXSOoQWxhNP75Puz242AvMb
