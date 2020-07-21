@@ -11,6 +11,7 @@ scp 172.30.0.239:zim* /mnt/c/Users/Zimisele/OpenVPN/config/ ## for going to my c
 less /var/log/rabbitmq/rabbit@oneRabbit.log ---looking for logs for checking logs
 :%s/the name you want to change/name you want it to change to  ## when you change the name on VI
 ps -aux | grep docker for greping process
+netstat -tulpn | grep LISTEN ## for checking the open ports
 
 ## when you expend partition on ubuntu ec2 aws
    fdisk -l
