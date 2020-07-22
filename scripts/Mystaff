@@ -13,6 +13,7 @@ less /var/log/rabbitmq/rabbit@oneRabbit.log ---looking for logs for checking log
 ps -aux | grep docker for greping process
 netstat -tulpn | grep LISTEN ## for checking the open ports
 ncat -v smtp.gmail.com 587 ## for checking connection to the port
+cat -n mongobackup.sh ## for checking folder with number
 
 ## when you expend partition on ubuntu ec2 aws
    fdisk -l
