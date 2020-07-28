@@ -14,6 +14,9 @@ ps -aux | grep docker for greping process
 netstat -tulpn | grep LISTEN ## for checking the open ports
 ncat -v smtp.gmail.com 587 ## for checking connection to the port
 cat -n mongobackup.sh ## for checking folder with number
+service vmware-sps status (Check the status of the service)
+service vmware-sps start (Start the service if it is stopped)
+
 
 ## when you expend partition on ubuntu ec2 aws
    fdisk -l
