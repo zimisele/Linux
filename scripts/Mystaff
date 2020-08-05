@@ -17,6 +17,10 @@ cat -n mongobackup.sh ## for checking folder with number
 service vmware-sps status (Check the status of the service)
 service vmware-sps start (Start the service if it is stopped)
 
+##creating user
+sudo adduser username
+sudo usermod -aG sudo username
+
 
 ## when you expend partition on ubuntu ec2 aws
    fdisk -l
