@@ -18,6 +18,10 @@ service vmware-sps status (Check the status of the service)
 service vmware-sps start (Start the service if it is stopped)
 docker exec -it dockerContainer bash ##for entering on docker
 KUBECONFIG=/etc/kubernetes/admin.conf kubectl get nodes ## when you get this Error/The connection to the server localhost:8080 was refused - did you specify the right host or port?
+mkdir -p $HOME/.kube
+sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+sudo chown $(id -u):$(id -g) $HOME/.kube/config
+
 ##creating user
 sudo adduser username
 sudo usermod -aG sudo username
