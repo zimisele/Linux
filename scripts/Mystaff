@@ -21,7 +21,8 @@ KUBECONFIG=/etc/kubernetes/admin.conf kubectl get nodes ## when you get this Err
 mkdir -p $HOME/.kube
 sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
 sudo chown $(id -u):$(id -g) $HOME/.kube/config
-
+kubectl get -n kube-logging statefulset for statefulSet deployments
+kubectl scale statefulset es-cluster -n kube-logging --replicas=0
 ##creating user
 sudo adduser username
 sudo usermod -aG sudo username
