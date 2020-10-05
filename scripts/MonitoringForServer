@@ -25,3 +25,35 @@ prometheus config file
   basic_auth:
     username: vyu4etVYrrr89DPd91wyYT0eyRFJjNun
     password: vyu4etVYrrr89DPd91wyYT0eyRFJjNun:QkSWGYpvcCXSOoQWxhNP75Puz242AvMb
+
+
+
+Falco staff
+
+   36  helm repo add falcosecurity https://falcosecurity.github.io/charts
+   37  sudo snap install helm
+   38  sudo snap install helm --classic
+   39  helm repo add falcosecurity https://falcosecurity.github.io/charts
+   40  helm install falco falcosecurity/falco
+   41  clear
+   42  kubectl get all -A | grep falco
+   43  cd /var/log/pods/
+   44  ls
+   45  cd default_falco-mh6bp_d1ed23ad-8b95-4cb9-9cc6-061e1627696f
+   46  ls
+   47  clear
+   48  ls
+   49  cd falco/
+   50  ls\
+   51  ls
+   52  clear
+   53  ll
+   54  less /var/lib/docker/containers/ff42a886cfd36626f37e312967dbd9b164edd5cff51f53825395648e08aece1e/ff42a886cfd36626f37e312967dbd9b164edd5cff51f53825395648e08aece1e-json.log
+   55  sudo less /var/lib/docker/containers/ff42a886cfd36626f37e312967dbd9b164edd5cff51f53825395648e08aece1e/ff42a886cfd36626f37e312967dbd9b164edd5cff51f53825395648e08aece1e-json.log
+   56  clear
+   57  cd
+   58  ls
+   59  clear
+   60  sudo less /var/lib/docker/containers/ff42a886cfd36626f37e312967dbd9b164edd5cff51f53825395648e08aece1e/ff42a886cfd36626f37e312967dbd9b164edd5cff51f53825395648e08aece1e-json.log
+   61  kubectl get po
+   62  history
