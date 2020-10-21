@@ -45,7 +45,7 @@ ufw reload
 ## To change hostname on Vms
 - nmtui
 - exec bash
-
+nmap -sV -A -T5 -p- --script=ssl-cert.nse IP address ## when you scanning VMs
 tcpdump -s 0 -vv -X 'tcp dst port 443' -w azuretest.pcap ##when you checking dump
 curl https://iotnxt.azurecr.io -v ##when you testing URL 
 openssl s_client -connect 127.0.0.1:5671 ##when you testing the certificates
