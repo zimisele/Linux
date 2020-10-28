@@ -26,15 +26,24 @@ sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
 sudo chown $(id -u):$(id -g) $HOME/.kube/config
 kubectl get -n kube-logging statefulset for statefulSet deployments
 kubectl scale statefulset es-cluster -n kube-logging --replicas=0
+
+
 ##creating user
 useradd -g users -G sudo -s /bin/bash -m -c "mihle"  zandile
 passwd zandile
+## optional
+#visudo (open sudoers file and append the below)
+#user bsmmon privileges
+bsmmon ALL=(root) NOPASSWD: /bin/cat /etc/shadow, /bin/cat /var/log/messages, /bin/cat /etc/vsftpd/vsftpd.conf, /bin/cat /etc/vsftpd.ftpusers, /bin/cat /etc/ssh/sshd_config, /sbin/ifconfig, /bin/cat /etc/security/opasswd, /bin/cat /etc/grub.conf
 
 
 ## when you expend partition on ubuntu ec2 aws
    fdisk -l
    lsblk
    growpart /dev/xvda 1
+xfs_growfs / ## if is xfs system
+resize2fs /dev/sda2 ## if is ext4 system
+
 
 ##opening ports on Vms
 ufw status
