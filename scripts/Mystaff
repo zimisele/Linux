@@ -60,6 +60,8 @@ tcpdump -s 0 -vv -X 'tcp dst port 443' -w azuretest.pcap ##when you checking dum
 curl https://iotnxt.azurecr.io -v ##when you testing URL 
 openssl s_client -connect 127.0.0.1:5671 ##when you testing the certificates
 nmap IP address of the server to check open ports
+curl -k -L -H "host:iot.safaricombusiness.co.ke" https://10.180.107.11 -v ## checking the DNS 
+
 
 #git commands line
 git init
