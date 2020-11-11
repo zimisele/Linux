@@ -28,6 +28,9 @@ sudo chown $(id -u):$(id -g) $HOME/.kube/config
 kubectl get -n kube-logging statefulset for statefulSet deployments
 kubectl scale statefulset es-cluster -n kube-logging --replicas=0
 
+## Generates CSR certificates
+openssl req -new -newkey rsa:2048 -nodes -keyout k8s.safaricom.iotnxt.io.key -out server.csr -config k8s.conf 
+
 
 ##creating user
 useradd -g users -G sudo -s /bin/bash -m -c "mihle"  zandile
