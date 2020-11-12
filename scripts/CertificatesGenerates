@@ -1,0 +1,35 @@
+The ways of generating the certificates
+## createing file name "k8s.conf" and paste file
+[ req ]
+default_bits = 1024
+default_keyfile = privkey.pem
+distinguished_name = ca_dn
+x509_extensions = k8s_extensions
+req_extensions = k8s_extensions
+string_mask = MASK:0x2002
+utf8 = yes
+prompt = no
+
+[ ca_dn ]
+0.CN=k8s.safaricom.iotnxt.io
+C = KE
+ST = Nairobi
+L = Nairobi
+O = Safaricom PLC
+OU = Enterprise IOT
+CN = k8s.safaricom.iotnxt.io
+emailAddress=enterpriseiot@safaricom.co.ke
+
+[ k8s_extensions ]
+subjectKeyIdentifier=hash
+basicConstraints=critical,CA:TRUE
+keyUsage=digitalSignature, keyCertSign, cRLSign
+
+Then run command
+openssl req -new -newkey rsa:2048 -nodes -keyout k8s.safaricom.iotnxt.io.key -out kubernetes.csr -config k8s.conf
+
+## another commands
+openssl genrsa -out private.key 2048
+openssl req -new -sha256 -key private.key -out domain.csr
+file in required fields
+
