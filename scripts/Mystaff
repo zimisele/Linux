@@ -32,6 +32,9 @@ kubectl scale statefulset es-cluster -n kube-logging --replicas=0
 ## Generates CSR certificates
 openssl req -new -newkey rsa:2048 -nodes -keyout k8s.safaricom.iotnxt.io.key -out server.csr -config k8s.conf 
 
+## scanning the VMS
+nmap -T4 -sV --script ssl-enum-ciphers -p- -A 10.180.107.18 > 10.180.107.18.txt
+nmap -sV -A -T5 -p- --script=ssl-cert.nse google.com
 
 ##creating user
 useradd -g users -G sudo -s /bin/bash -m -c "mihle"  zandile
