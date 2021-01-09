@@ -52,6 +52,8 @@ bsmmon ALL=(root) NOPASSWD: /bin/cat /etc/shadow, /bin/cat /var/log/messages, /b
 xfs_growfs / ## if is xfs system
 resize2fs /dev/sda2 ## if is ext4 system
 
+##Ansible commands
+ansible -i inventor~ servers -a "grep ^root: /etc/shadow"  -b -K
 
 ##opening ports on Vms
 ufw status
