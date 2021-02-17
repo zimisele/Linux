@@ -34,6 +34,7 @@ openssl req -new -newkey rsa:2048 -nodes -keyout k8s.safaricom.iotnxt.io.key -ou
 
 openssl genrsa -out vraptor01.safaricombusiness.co.ke.key 2048 first command
 openssl req -out vraptor01.safaricombusiness.co.ke.csr -key vraptor01.safaricombusiness.co.ke.key -new -sha256
+openssl req -text -noout -verify -in iottestbilling.safaricom.net.csr   ## to test certificates
 
 
 ## scanning the VMS
