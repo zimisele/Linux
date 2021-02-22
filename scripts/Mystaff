@@ -36,6 +36,8 @@ openssl genrsa -out vraptor01.safaricombusiness.co.ke.key 2048 first command
 openssl req -out vraptor01.safaricombusiness.co.ke.csr -key vraptor01.safaricombusiness.co.ke.key -new -sha256
 openssl req -text -noout -verify -in iottestbilling.safaricom.net.csr   ## to test certificates
 
+sudo tcptraceroute iottestbilling.safaricom.net 443 ## when you checking if they allow you over VPN
+openssl x509 -text -noout enter and paste certificates ## when you verifying the certificates
 
 ## scanning the VMS
 nmap -T4 -sV --script ssl-enum-ciphers -p- -A 10.180.107.18 > 10.180.107.18.txt
