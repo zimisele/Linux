@@ -51,6 +51,9 @@ passwd zandile
 #user bsmmon privileges
 bsmmon ALL=(root) NOPASSWD: /bin/cat /etc/shadow, /bin/cat /var/log/messages, /bin/cat /etc/vsftpd/vsftpd.conf, /bin/cat /etc/vsftpd.ftpusers, /bin/cat /etc/ssh/sshd_config, /sbin/ifconfig, /bin/cat /etc/security/opasswd, /bin/cat /etc/grub.conf
 
+Rook-Ceph
+Update rook
+ helm3 upgrade --install --history-max 3 -f /root/ansible-state/rook-ceph-values.yaml --version v1.3.3 --namespace rook-ceph rook-ceph rook-release/rook-ceph
 
 ## when you expend partition on ubuntu ec2 aws
    fdisk -l
