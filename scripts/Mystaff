@@ -6,6 +6,7 @@ sudo apt update && sudo apt dist-upgrade ## #for updating everything
 fdisk -l  # #for checking for disk
 firewall-cmd --zone=public --add-port=80/tcp  ##opening port
 firewall-cmd --permanent --zone=public --add-port=80/tcp  ##permanent
+lsb_release -a ## to see os that is running on nodes
 curl localhost:200/metrics # for checking metrics
 scp 172.30.0.239:zim* /mnt/c/Users/Zimisele/OpenVPN/config/ ## for going to my computer directory
 less /var/log/rabbitmq/rabbit@oneRabbit.log ---looking for logs for checking logs
