@@ -1,0 +1,11 @@
+ecr:
+  enabled: true
+  # This creds only allows read-only access to ECR. Do not put creds with more access into the repo!!!
+  awsAccessKeyId: "AKIA4CSJTTD5CGLT3FBT"
+  awsSecretAccessKey: "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"
+  awsAccount: "830156806394"
+  awsRegion: "eu-west-1"
+#  existingSecretName: ""
+#  awsAssumeRole: ""
+
+#resources:
