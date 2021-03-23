@@ -17,6 +17,7 @@ nc -v -u IP : port ## for checking the open ports
 ncat -v smtp.gmail.com 587 ## for checking connection to the port
 cat -n mongobackup.sh ## for checking folder with number
 minikube service servicename ## when you want to check service
+kubectl create secret docker-registry regcred --docker-server=<your-registry-server> --docker-username=<your-name> --docker-password=<your-pword> --docker-email=<your-email> ## when creating the secret for pull docker images
 arp -a IP address # for checking if IP is dublicated
 kubectl apply -f "https://cloud.weave.works/k8s/net?k8s-version=$(kubectl version | base64 | tr -d '\n')" ## when nodes not ready 
 service vmware-sps status (Check the status of the service)
