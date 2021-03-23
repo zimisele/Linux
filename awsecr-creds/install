@@ -1,0 +1,25 @@
+#!/bin/bash
+
+# Helm version detection
+if [ -z "$helm" ]; then
+    if which helm3 > /dev/null; then
+        helm=helm3
+        echo "Using Helm3"
+    elif which helm2 > /dev/null; then
+        helm=helm2
+        echo "Using Helm2"
+    elif which helm > /dev/null; then
+        helm=helm
+        echo "Using default helm"
+    else
+        echo "Fatal: Helm not installed / in path" >&2
+        exit 1
+    fi
+else
+    echo "USing supplied helm: $helm"
+fi
+
+$helm repo add kir4h https://kir4h.github.io/charts
+$helm repo update
+
+$helm upgrade --install registry-creds --namespace kube-system kir4h/registry-creds --values values.yaml
