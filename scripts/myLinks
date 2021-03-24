@@ -1,1 +1,2 @@
 https://netplan.io/examples/ for manual install IPs
+https://v1-16.docs.kubernetes.io/docs/tasks/administer-cluster/kubeadm/kubeadm-upgrade/ ## for upgrade cluster
