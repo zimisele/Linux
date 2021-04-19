@@ -31,6 +31,10 @@ sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
 sudo chown $(id -u):$(id -g) $HOME/.kube/config
 kubectl get -n kube-logging statefulset for statefulSet deployments
 kubectl scale statefulset es-cluster -n kube-logging --replicas=0
+
+##Generating keys
+ssh-keygen -t rsa -f ~/.ssh/id_rsa
+
 ## rabbitmq 
 apt install rabbitmq-server=3.8.9-1
 
