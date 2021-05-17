@@ -1,3 +1,4 @@
+helm ## name of the file
 #!/bin/bash
 
 # Helm version detection
